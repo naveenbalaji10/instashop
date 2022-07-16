@@ -1,0 +1,75 @@
+$small: 650px;
+$medium: 1200px;
+$color1: rgb(39, 173, 167);
+
+.cardscontainer {
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+
+  .imagecontainer {
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+  }
+  .productimage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  h5 {
+    padding-left: 20px;
+    font-weight: 600;
+  }
+  p {
+    padding-left: 20px;
+  }
+
+  @media screen and (min-width: $small) and (max-width: $medium) {
+    width: 200px;
+    height: 250px;
+
+    .imagecontainer {
+      padding: 20px;
+      width: 160px;
+      height: 160px;
+    }
+    h5 {
+      padding-left: 10px;
+      font-weight: 600;
+    }
+    p {
+      padding-left: 10px;
+    }
+  }
+
+  @media screen and (max-width: $small) {
+    width: 200px;
+    height: 250px;
+    margin: 0 auto;
+
+    .imagecontainer {
+      padding: 10px;
+      width: 180px;
+      height: 200px;
+    }
+    h5 {
+      padding-left: 10px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    p {
+      padding-left: 10px;
+    }
+  }
+
+  &:hover {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.6;
+  }
+}

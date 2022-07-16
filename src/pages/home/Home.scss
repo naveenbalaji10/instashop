@@ -1,0 +1,16 @@
+$color1: rgb(39, 173, 167);
+$small: 650px;
+
+h3 {
+  font-size: 40px;
+  font-weight: 500;
+  color: $color1;
+  padding: 20px 0;
+  padding-left: 100px;
+
+  @media screen and (max-width: $small) {
+    font-size: 24px;
+    margin-left: 10px;
+    padding: 10px;
+  }
+}
