@@ -12,13 +12,7 @@ const Product = () => {
     
     const cart=useSelector((state)=>state.cart)
 
-    useEffect(()=>{
-   console.log(cart)
-    },[cart])
 
-    useEffect(()=>{
-     console.log(product)
-    },[product])
 
 const handleclick=()=>{
  dispatch(additem(product))

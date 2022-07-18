@@ -6,7 +6,7 @@ import Card from '../../components/card/Card'
 import './Home.scss'
 import { Col, Row } from 'react-bootstrap'
 
-const Home = () => {
+const Home = ({filteredItems}) => {
    const dispatch=useDispatch()
 
    const productsdata=useSelector((state)=>state.product.products.data)
@@ -17,13 +17,8 @@ const Home = () => {
        dispatch(fetchProducts())
    },[])
 
-   useEffect(()=>{
-   console.log(productsdata)
-   },[productsdata])
 
-   useEffect(()=>{
-    console.log(loading)
-    },[loading])
+
 
   return (
     <div className='d-flex flex-column align-items-center'>
@@ -40,7 +35,7 @@ const Home = () => {
            ariaLabel='loading'/>
            :
 
-           productsdata?.map((item)=>(
+          (filteredItems?.length > 0 ? filteredItems : productsdata)?.map((item)=>(
                <Col xs={12} sm={4} lg={3} >
                <Card item={item}/>
                </Col>

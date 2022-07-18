@@ -1,4 +1,7 @@
+$small: 576px;
 
+.cartouter{
+height: 90vh;
 .cartcontainer{
     width:1200px;
     padding: 10px;
@@ -38,6 +41,8 @@
 
 
     .itemcontainer{
+   
+    position: relative;
     width: 1200px;
     border-radius: 6px;
     background-color: #fff;
@@ -63,7 +68,7 @@
         flex:0.1;
 
         button{
-        width:40px;
+        width:30px;
         height: 30px;
         border-radius: 50%;
         padding: 5px;
@@ -72,23 +77,59 @@
         border: none;
         }
        }
-
-       .pl-1{
-        margin-right:-20px;
-        margin-bottom: 10px;
-       }
- 
-       .pr-1{
-        margin-left: -20px;
-        margin-bottom: 10px;
-
-       }
        .pl-2{
         margin-left:10px;
        }
 
        .price1{
         flex:0.2;
+
+        button{
+            width:30px;
+            height: 30px;
+            border-radius: 50%;
+            padding: 5px;
+            background-color: rgb(4, 100, 103);
+            color: #fff;
+            border: none;
+            }
        }
-     
+
+     h4{
+         padding:0 10px ;
+         padding-top:10px;
+     }
     }
+.totalcontainer{
+    width: 1200px;
+    bottom: 0px;   
+    position: absolute;
+ 
+    .buy{
+        margin: 20px;
+
+        width:90%;
+        border-radius:10px;
+        padding: 5px;
+        background-color: rgb(4, 100, 103);
+        color: #fff;
+        border: none;
+        
+        &:hover{
+        background-color: rgb(14, 48, 49);
+        }
+       }
+
+       h3{
+     text-align: right;
+       }
+}
+
+@media screen and (max-width: $small) {
+   width:100%;
+
+   .cartcontainer{
+    width:100%;
+   }
+}
+}

@@ -14,6 +14,13 @@ import Cart from './pages/cart/Cart';
 
 function App() {
 
+  const [filteredItems,setFilteredItems]=useState([]);
+
+
+  useEffect(()=>{
+ console.log(filteredItems)
+  },[filteredItems])
+
 
   return (
     <Provider store={store}>
@@ -23,9 +30,9 @@ function App() {
 
     <div className="App">
      <Router>
-       <Navbar/>
+       <Navbar setFilteredItems={setFilteredItems}/>
        <Routes>
-         <Route path='/' index element={<Home/>}/>
+         <Route path='/' index element={<Home filteredItems={filteredItems}/>}/>
          <Route path='/product' element={<Product/>}/>
          <Route path='/cart' element={<Cart/>} />
        </Routes>
