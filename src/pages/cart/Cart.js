@@ -29,7 +29,7 @@ useEffect(()=>{
           cartitems !== undefined &&   cartitems.map((item,i)=>(
           
               <div className='itemcontainer d-flex align-items-center mt-3'>
-                    <div className='sno1 text-center'><h4>{i}</h4></div>
+                    <div className='sno1 text-center'><h4>{i + 1}</h4></div>
                     <div className= 'image1 d-flex justify-content-center'><img src={item.image.url} /></div>
                     <div className='name1 text-center'><h4>{item.name}</h4></div>
                     <div className='qty1 d-flex align-items-center text-center'>
